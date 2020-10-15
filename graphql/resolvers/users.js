@@ -22,6 +22,7 @@ module.exports = {
   Mutation: {
     register: async (parent, args, context, info) => {
       // Retrieve the arguments
+      // destructuring with let might cause an issue...
       let {
         registerInput: { username, email, password, confirmPassword }
       } = args
